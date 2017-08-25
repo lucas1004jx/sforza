@@ -433,14 +433,14 @@ $(function () {
          var controller = new ScrollMagic.Controller();
    var scene1 = new ScrollMagic.Scene({
             triggerElement: "#intro",
-            triggerHook: 0.5
+            triggerHook:1
         }).setTween(introTl)
-        /*.addIndicators({
+        .addIndicators({
             name: "intro",
             colorTrigger: "black",
             colorStart: "white",
             colorEnd: "#fff"
-        })*/
+        })
         .addTo(controller);
     
     var scene2 = new ScrollMagic.Scene({
@@ -547,13 +547,13 @@ $(function () {
        }
     
   
-    /*$(window).on("resize", function() {
-        var tm;
-        clearTimeout(tm);
-        tm = setTimeout(function() {
-                location.reload();  // refresh page 
-            
-        }, 100);
-    });*/
+    $(window).on("resize", function() {
+        
+       if($(window).width() < 1030 && $(window).width()>1010){
+           console.log("aaa");
+           location.reload();  // refresh page
+          }      
+       
+    });
 
 });
