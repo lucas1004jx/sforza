@@ -293,8 +293,7 @@ $(function () {
 
     var galleryTl =new TimelineLite();
     
-    galleryTl.from("#gallery header",1,{opacity:0,y:100})
-             .from(".carousel .item",1,{opacity:0,y:100});
+    galleryTl.from("#gallery header",1,{opacity:0,y:100});
     
      var contactTl = new TimelineLite();
       contactTl.from("#contact h1",1,{opacity:0,y:100})
@@ -366,10 +365,12 @@ $(function () {
     
     var scene7= new ScrollMagic.Scene({
         triggerElement:"#gallery",
-        triggerHook:0.5
+        triggerHook:1
     })
     .setTween(galleryTl)
-    /*.addIndicators()*/
+    /*.addIndicators({
+        name:"gallery"
+    })*/
     .addTo(controller);
     
     var scene8= new ScrollMagic.Scene({
@@ -479,7 +480,7 @@ $(function () {
     
     var scene7= new ScrollMagic.Scene({
         triggerElement:"#gallery",
-        triggerHook:0.5
+        triggerHook:1
     })
     .setTween(galleryTl)
     /*.addIndicators()*/
