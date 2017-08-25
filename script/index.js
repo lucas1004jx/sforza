@@ -366,8 +366,7 @@ $(function () {
     
     var scene7= new ScrollMagic.Scene({
         triggerElement:"#gallery",
-        triggerHook:0.5,
-        duration:"50%"
+        triggerHook:0.5
     })
     .setTween(galleryTl)
     /*.addIndicators()*/
@@ -429,12 +428,12 @@ $(function () {
             triggerElement: "#intro",
             triggerHook:1
         }).setTween(introTl)
-        .addIndicators({
+       /* .addIndicators({
             name: "intro",
             colorTrigger: "black",
             colorStart: "white",
             colorEnd: "#fff"
-        })
+        })*/
         .addTo(controller);
     
     var scene2 = new ScrollMagic.Scene({
@@ -480,8 +479,7 @@ $(function () {
     
     var scene7= new ScrollMagic.Scene({
         triggerElement:"#gallery",
-        triggerHook:0.5,
-        duration:"50%"
+        triggerHook:0.5
     })
     .setTween(galleryTl)
     /*.addIndicators()*/
