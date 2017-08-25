@@ -526,10 +526,12 @@ city theme #D9598A(rgb(202,19,88)) #1CAFC0(rgb(28, 175, 192)) #FECA47 #83C25A(rg
 html {
   background: #fff;
   position: relative;
-  z-index: -11; }
+  z-index: -11;
+  overflow-x: hidden; }
 
 body {
   background: #E34649;
+  width: 100%;
   min-width: 320px;
   margin: 0 auto;
   position: relative;

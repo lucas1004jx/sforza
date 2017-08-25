@@ -6,11 +6,13 @@ html {
     background: #fff;
     position: relative;
     z-index: -11;
+    overflow-x: hidden;
 }
 
 body {
     background: $red;
     //max-width: 1024px;
+    width: 100%;
     min-width: 320px;
     margin: 0 auto;
     position: relative;
