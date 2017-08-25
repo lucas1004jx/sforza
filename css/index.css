@@ -781,8 +781,12 @@ a:link {
       @media (min-width: 1024px) {
         #team #page3 .logo {
           display: block;
-          grid-area: logo;
-          width: 50%; } }
+          position: relative;
+          grid-area: logo; } }
+      #team #page3 .logo img {
+        position: absolute;
+        bottom: 10px;
+        width: 40%; }
     #team #page3 #man {
       grid-area: man;
       text-align: right; }
