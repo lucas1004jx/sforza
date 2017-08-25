@@ -304,9 +304,14 @@ a:link {
             display: none;
             @include break(1024px){
                 display: block;
-                grid-area: logo;
-            width: 50%;
+                position: relative;
+                grid-area: logo;   
             }
+            img{
+                position: absolute;
+                bottom:10px;
+                 width: 40%; 
+                }
             
         }
         #man {
