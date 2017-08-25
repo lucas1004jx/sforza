@@ -547,13 +547,13 @@ $(function () {
        }
     
   
-    $(window).on("resize", function() {
+    /*$(window).on("resize", function() {
         var tm;
         clearTimeout(tm);
         tm = setTimeout(function() {
                 location.reload();  // refresh page 
             
         }, 100);
-    });
+    });*/
 
 });
