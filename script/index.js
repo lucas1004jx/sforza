@@ -294,13 +294,7 @@ $(function () {
     var galleryTl =new TimelineLite();
     
     galleryTl.from("#gallery header",1,{opacity:0,y:100})
-             .staggerFrom(".carousel .item",1,{
-        cycle:{
-            rotationX:[-180,180],
-            x:[-100,0,100]
-        },
-        opacity:0
-    },0.1);
+             .from(".carousel .item",1,{opacity:0,y:100});
     
      var contactTl = new TimelineLite();
       contactTl.from("#contact h1",1,{opacity:0,y:100})
