@@ -137,6 +137,9 @@ $(function () {
     }
 
     //------------scroll magic---------------
+   
+    
+    
     $("#intro .text").lettering("words");
      $(".client .text").lettering("words");
     
@@ -440,7 +443,7 @@ $(function () {
     var scene2 = new ScrollMagic.Scene({
             triggerElement: "#team",
             triggerHook: 0.4,
-            duration: "20%"
+            
         }).setTween(toñoTl)
         /*.addIndicators({
             name: "toño"
@@ -449,8 +452,8 @@ $(function () {
 
     var scene3 = new ScrollMagic.Scene({
             triggerElement: "#team",
-            triggerHook: 0.2,
-            duration: "20%"
+            triggerHook: 0.1,
+            
         }).setTween(anaTl)
         /* .addIndicators({
          name:"ana"
@@ -460,7 +463,7 @@ $(function () {
     var scene4 = new ScrollMagic.Scene({
             triggerElement: "#team",
             triggerHook: 0.5,
-            duration: 100
+            
         }).setTween(teamTl)
         /*.addIndicators({
         name:"team header"
@@ -540,13 +543,6 @@ $(function () {
        }
     
   
-    $(window).on("resize", function() {
-        
-       if($(window).width() < 1030 && $(window).width()>1010){
-           console.log("aaa");
-           location.reload();  // refresh page
-          }      
-       
-    });
+    
 
 });
