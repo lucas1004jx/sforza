@@ -542,7 +542,26 @@ $(function () {
            scrollMovil();
        }
     
-  
+  var wWidth=$(window).width();
+var screen="";
+    if(wWidth<1024){
+        screen="small";
+    }else if(wWidth>1024){
+          screen="big";   
+             }
     
+    $(window).resize(function(){
+        var currentWidth= $(window).width();
+        
+        if(currentWidth<1024 && screen==="big"){
+            location.reload();
+            screen="small";
+            console.log("small");
+        }else if(currentWidth>=1024 && screen==="small"){
+             location.reload();
+            screen="big";
+            console.log("big");
+                 }
+    });
 
 });
