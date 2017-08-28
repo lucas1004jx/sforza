@@ -75,20 +75,7 @@ $(function () {
 
 
     //----------------foto overlay------------------
-    function overlay() {
-        var wWidth = $(window).width();
-        var wHeight = $(window).height();
-        $("#foto-overlay").css({
-            width: wWidth,
-            height: wHeight,
-            position: "fixed",
-            background: "rgba(0,0,0,0.8)",
-            zIndex: 100,
-            top: 0,
-            left: 0
-        });
-    }
-
+    
     function showImg() {
         $owl.find(".center img").click(function () {
             $("#foto-overlay").fadeIn();
@@ -98,15 +85,13 @@ $(function () {
         });
     }
 
-    overlay();
+   
     showImg();
 
     $(".aspa,#foto-overlay img").click(function () {
         $("#foto-overlay").fadeOut();
     });
-    $(window).resize(function () {
-        overlay();
-    });
+    
     //-------------tarifa -----------------
     /*$(".tarifa").mouseover(function () {
         var $this = $(this);
@@ -256,11 +241,11 @@ $(function () {
 
 
     var tarifaTl = new TimelineLite();
-    tarifaTl.from("#tarifa header", 1, {
+    tarifaTl.from("#tarifa header", 0.5, {
             opacity: 0,
             y: 100
         })
-        .staggerFrom(".tarifa", 1, {
+        .staggerFrom(".tarifa", 0.5, {
             cycle: {
                 x: function () {
                     return Math.random() * 600 - 300
@@ -271,7 +256,7 @@ $(function () {
             },
             opacity: 0
         }, 0.1)
-        .staggerFrom(".num", 1, {
+        .staggerFrom(".num", 0.5, {
             cycle: {
                 x: function () {
                     return Math.random() * 600 - 300
@@ -282,7 +267,7 @@ $(function () {
             },
             opacity: 0
         },0.1)
-        .staggerFrom(".tarifa .text", 1, {
+        .staggerFrom(".tarifa .text", 0.5, {
             cycle: {
                 x: function () {
                     return Math.random() * 600 - 300
@@ -474,8 +459,7 @@ $(function () {
 
     var scene6= new ScrollMagic.Scene({
         triggerElement:"#tarifa",
-        triggerHook:0.5,
-        duration:"50%"
+        triggerHook:0.5
     })
     .setTween(tarifaTl)
     /*.addIndicators()*/
@@ -563,5 +547,6 @@ var screen="";
             console.log("big");
                  }
     });
+    
 
 });

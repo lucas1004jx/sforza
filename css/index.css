@@ -712,7 +712,7 @@ a:link {
   @media (min-width: 1024px) {
     #team {
       height: 100vh;
-      min-height: 900px;
+      min-height: 960px;
       margin-top: 0;
       background: none;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -746,9 +746,9 @@ a:link {
         grid-template-areas: ". header header" ". man text1" "logo woman text2";
         grid-row-gap: 50px; } }
     #team #page3 .overlay {
-      background: rgba(255, 255, 255, 0.5);
+      background: #fff;
       padding: 10px;
-      margin: -2px;
+      margin: 0px;
       background: url("../images/paper.jpg"); }
       @media (min-width: 1024px) {
         #team #page3 .overlay {
@@ -766,14 +766,15 @@ a:link {
     #team #page3 .header {
       margin: 0;
       color: #000;
-      grid-area: header; }
+      grid-area: header;
+      padding: 0; }
       #team #page3 .header span {
         border-bottom: 4px solid #E34649; }
         @media (min-width: 1024px) {
           #team #page3 .header span {
             border-bottom: 4px solid #fff; } }
     #team #page3 h1.overlay {
-      margin: -2px; }
+      margin: 0px; }
       @media (min-width: 1024px) {
         #team #page3 h1.overlay {
           background: none;
@@ -1279,7 +1280,13 @@ a:link {
 
 #foto-overlay {
   display: none;
-  position: relative; }
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(22, 22, 22, 0.8);
+  z-index: 100; }
   #foto-overlay img {
     position: absolute;
     margin: auto;

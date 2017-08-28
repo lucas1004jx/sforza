@@ -227,7 +227,7 @@ a:link {
     clip-path: polygon(0 0, 100% 10%, 100% 85%, 0 100%);
     @include break(1024px) {
         height: 100vh;
-        min-height:900px;
+        min-height:960px;
         margin-top: 0;
         background: none;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -264,10 +264,10 @@ a:link {
             grid-row-gap: 50px;
         }
         .overlay {
-            background: rgba($white, 0.5);
+            background: #fff;
             padding: 10px;
-            margin: -2px;
-            background: url("../images/paper.jpg");
+            margin: 0px;
+           background: url("../images/paper.jpg");
             @include break(1024px) {
                 background: url("../images/paper.jpg");
             }
@@ -288,6 +288,7 @@ a:link {
             margin: 0;
             color: #000;
             grid-area: header;
+            padding: 0;
             span {
                 border-bottom: 4px solid $red;
                 @include break(1024px) {
@@ -296,7 +297,7 @@ a:link {
             }
         }
         h1.overlay {
-            margin: -2px;
+            margin: 0px;
             @include break(1024px) {
                 background: none;
                 color: #fff;
@@ -848,7 +849,14 @@ a:link {
 //-----------------------foto overlay--------------------
 #foto-overlay {
     display: none;
-    position: relative;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background: rgba($grey,0.8);
+    z-index: 100;
+    
     img {
         position: absolute;
         margin: auto;
