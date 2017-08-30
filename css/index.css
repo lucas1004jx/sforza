@@ -585,11 +585,35 @@ a:link {
   text-decoration: underline !important;
   color: #E34649; }
 
+@keyframes bcg {
+  0% {
+    background-image: url("../images/alvaro_bg.jpg"); }
+  10% {
+    background-image: url("../images/alvaro_bg.jpg"); }
+  20% {
+    background-image: url("../images/gabri_bg.jpg"); }
+  30% {
+    background-image: url("../images/gabri_bg.jpg"); }
+  40% {
+    background-image: url("../images/bea_bg.jpg"); }
+  50% {
+    background-image: url("../images/bea_bg.jpg"); }
+  60% {
+    background-image: url("../images/ivan_bg.jpg"); }
+  70% {
+    background-image: url("../images/ivan_bg.jpg"); }
+  80% {
+    background-image: url("../images/alvaro_bg.jpg"); }
+  100% {
+    background-image: url("../images/alvaro_bg.jpg"); } }
 #home {
   width: 100%;
   height: 120vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/alvaro_bg.jpg") no-repeat center;
+  background: url("../images/alvaro_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  animation: bcg 15s ease-in infinite;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%); }
   @media (min-width: 1024px) {
@@ -651,9 +675,9 @@ a:link {
       height: 100%;
       position: relative;
       /* display: grid;
-       grid-template-columns: 60% 1fr;
-       grid-template-rows: 10% 1fr 10%;
-       grid-template-areas: ". ." "about ." ". .";*/ } }
+      grid-template-columns: 60% 1fr;
+      grid-template-rows: 10% 1fr 10%;
+      grid-template-areas: ". ." "about ." ". .";*/ } }
 #intro .scrollmagic-pin-spacer {
   width: 100% !important; }
   @media (min-width: 1024px) {
@@ -664,9 +688,9 @@ a:link {
   @media (min-width: 1024px) {
     #intro .about {
       /* max-width: 1024px;
-       background: $red;
-       padding: 30px;
-       grid-area: about;*/
+      background: $red;
+      padding: 30px;
+      grid-area: about;*/
       position: absolute;
       width: 50% !important;
       max-width: 1000px;

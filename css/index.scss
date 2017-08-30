@@ -18,7 +18,6 @@ body {
     position: relative;
     z-index: -10;
     overflow-x: hidden;
-    
 }
 
 .page {
@@ -65,7 +64,7 @@ body {
     filter: grayscale(0%) !important;
 }
 
-img{
+img {
     transition: filter 1s ease-in;
 }
 
@@ -77,12 +76,52 @@ a:link {
     color: $red;
 }
 
+@keyframes bcg {
+    0% {
+        background-image: url("../images/alvaro_bg.jpg");
+       
+    }
+    10%{
+        background-image: url("../images/alvaro_bg.jpg");
+    }
+    20%{
+        background-image: url("../images/gabri_bg.jpg");
+    }
+    30% {
+        background-image: url("../images/gabri_bg.jpg");
+    }
+    40% {
+        background-image: url("../images/bea_bg.jpg");
+        
+    }
+    50% {
+        background-image: url("../images/bea_bg.jpg");
+    }
+    60% {
+        background-image: url("../images/ivan_bg.jpg");
+        
+    }
+    70% {
+        background-image: url("../images/ivan_bg.jpg");
+        
+    }
+    80% {
+        background-image: url("../images/alvaro_bg.jpg");
+       
+    }
+    100%{
+        background-image: url("../images/alvaro_bg.jpg");
+}
+}
 //-------------------------------home page----------------------------
 #home {
     width: 100%;
     height: 120vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/alvaro_bg.jpg") no-repeat center ;
+    background: url("../images/alvaro_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    animation: bcg 15s ease-in infinite;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
     @include break(1024px) {
@@ -148,37 +187,34 @@ a:link {
 //--------------------------------intro page------------------------
 #intro {
     #page2 {
-       
         width: 100%;
         @include break(1024px) {
             height: 100%;
-             position: relative;
-           /* display: grid;
+            position: relative;
+            /* display: grid;
             grid-template-columns: 60% 1fr;
             grid-template-rows: 10% 1fr 10%;
             grid-template-areas: ". ." "about ." ". .";*/
         }
     }
-    
-    .scrollmagic-pin-spacer{
-      //position: static !important;
-     width: 100% !important;
-        @include break(1024px){
-             position: absolute !important;
+    .scrollmagic-pin-spacer {
+        //position: static !important;
+        width: 100% !important;
+        @include break(1024px) {
+            position: absolute !important;
         }
     }
     .about {
         position: static;
-       
         @include break(1024px) {
-           /* max-width: 1024px;
+            /* max-width: 1024px;
             background: $red;
             padding: 30px;
             grid-area: about;*/
             position: absolute;
             width: 50% !important;
             max-width: 1000px;
-            top:10% ;
+            top: 10%;
             left: 0;
             background: $red;
             padding: 30px;
@@ -191,7 +227,7 @@ a:link {
     }
     .text {
         color: #fff;
-        span{
+        span {
             display: inline-block;
         }
     }
@@ -227,7 +263,7 @@ a:link {
     clip-path: polygon(0 0, 100% 10%, 100% 85%, 0 100%);
     @include break(1024px) {
         height: 100vh;
-        min-height:960px;
+        min-height: 960px;
         margin-top: 0;
         background: none;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -257,7 +293,6 @@ a:link {
         grid-template-areas: ". . ." "header header header" "man line text1" "overlay1 line overlay2" "text2 line woman" ". . .";
         margin: 0 auto;
         @include break(1024px) {
-
             grid-template-columns: 55% 1fr 1fr;
             grid-template-rows: 10% 1fr 1fr;
             grid-template-areas: ". header header" ". man text1" "logo woman text2";
@@ -267,7 +302,7 @@ a:link {
             background: #fff;
             padding: 10px;
             margin: 0px;
-           background: url("../images/paper.jpg");
+            background: url("../images/paper.jpg");
             @include break(1024px) {
                 background: url("../images/paper.jpg");
             }
@@ -303,19 +338,18 @@ a:link {
                 color: #fff;
             }
         }
-        .logo{
+        .logo {
             display: none;
-            @include break(1024px){
+            @include break(1024px) {
                 display: block;
                 position: relative;
-                grid-area: logo;   
+                grid-area: logo;
             }
-            img{
+            img {
                 position: absolute;
-                bottom:10px;
-                 width: 40%; 
-                }
-            
+                bottom: 10px;
+                width: 40%;
+            }
         }
         #man {
             grid-area: man;
@@ -326,8 +360,8 @@ a:link {
             }
             img {
                 border-radius: 100%;
-                width: 100px; 
-                 box-shadow: 2px 10px 10px rgba($black, 0.5);
+                width: 100px;
+                box-shadow: 2px 10px 10px rgba($black, 0.5);
                 @include break(481px,
                 768px) {
                     width: 150px;
@@ -335,7 +369,6 @@ a:link {
                 @include break(769px) {
                     width: 200px;
                 }
-               
             }
         }
         #woman {
@@ -747,7 +780,7 @@ a:link {
         }
         .text {
             grid-area: comment;
-            span{
+            span {
                 display: inline-block;
             }
         }
@@ -852,11 +885,10 @@ a:link {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    top:0;
+    top: 0;
     left: 0;
-    background: rgba($grey,0.8);
+    background: rgba($grey, 0.8);
     z-index: 100;
-    
     img {
         position: absolute;
         margin: auto;
@@ -924,9 +956,9 @@ nav {
     }
 }
 
-.footer{
+.footer {
     position: absolute;
-    bottom:5px;
-    left:10px;
-    color:#fff;
+    bottom: 5px;
+    left: 10px;
+    color: #fff;
 }
