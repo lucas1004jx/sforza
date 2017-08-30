@@ -63,7 +63,7 @@ $(function () {
             latitude: 41.613162,
             longitude: -4.686522,
             icon: '../images/marker.png',
-            title: '',
+            title: 'SOFROZA GYM',
             open: false,
             center: true
         },
