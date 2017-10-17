@@ -585,25 +585,42 @@ a:link {
   text-decoration: underline !important;
   color: #E34649; }
 
+@-webkit-keyframes bcg {
+  0% {
+    background-image: url("../images/alvaro_bg.jpg"); }
+  20% {
+    background-image: url("../images/alvaro_bg.jpg"); }
+  25% {
+    background-image: url("../images/gabri_bg.jpg"); }
+  45% {
+    background-image: url("../images/gabri_bg.jpg"); }
+  50% {
+    background-image: url("../images/bea_bg.jpg"); }
+  70% {
+    background-image: url("../images/bea_bg.jpg"); }
+  75% {
+    background-image: url("../images/ivan_bg.jpg"); }
+  95% {
+    background-image: url("../images/ivan_bg.jpg"); }
+  100% {
+    background-image: url("../images/alvaro_bg.jpg"); } }
 @keyframes bcg {
   0% {
     background-image: url("../images/alvaro_bg.jpg"); }
-  10% {
-    background-image: url("../images/alvaro_bg.jpg"); }
   20% {
+    background-image: url("../images/alvaro_bg.jpg"); }
+  25% {
     background-image: url("../images/gabri_bg.jpg"); }
-  30% {
+  45% {
     background-image: url("../images/gabri_bg.jpg"); }
-  40% {
-    background-image: url("../images/bea_bg.jpg"); }
   50% {
     background-image: url("../images/bea_bg.jpg"); }
-  60% {
-    background-image: url("../images/ivan_bg.jpg"); }
   70% {
+    background-image: url("../images/bea_bg.jpg"); }
+  75% {
     background-image: url("../images/ivan_bg.jpg"); }
-  80% {
-    background-image: url("../images/alvaro_bg.jpg"); }
+  95% {
+    background-image: url("../images/ivan_bg.jpg"); }
   100% {
     background-image: url("../images/alvaro_bg.jpg"); } }
 #home {
@@ -611,9 +628,10 @@ a:link {
   height: 120vh;
   background: url("../images/alvaro_bg.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 0px;
   background-size: cover;
-  animation: bcg 15s ease-in infinite;
+  -webkit-animation: bcg 30s ease-in infinite;
+  animation: bcg 30s ease-in infinite;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%); }
   @media (min-width: 1024px) {
@@ -639,7 +657,8 @@ a:link {
       position: relative;
       text-align: left;
       padding-left: 20px;
-      margin: 0; }
+      margin: 0;
+      opacity: 0; }
       @media (min-width: 481px) and (max-width: 768px) {
         #home #page1 h1 {
           font-size: 5rem;
@@ -649,6 +668,9 @@ a:link {
           font-size: 6rem;
           line-height: 7rem; } }
       #home #page1 h1 span {
+        display: inline-block;
+        opacity: 0; }
+      #home #page1 h1 span.sforza {
         color: #E34649; }
       #home #page1 h1:after {
         content: "";

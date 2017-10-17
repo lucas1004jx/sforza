@@ -93,19 +93,19 @@ $(function () {
         var wHeight = $(window).height();
         var imgWidth = $("#foto-overlay img").width();
         var imgHeight = $("#foto-overlay img").height();
-        var ratio= imgWidth/imgHeight;
-        var wRatio = imgWidth/wWidth;
-        var hRation=imgHeight/wHeight;
+        var ratio = imgWidth / imgHeight;
+        var wRatio = imgWidth / wWidth;
+        var hRation = imgHeight / wHeight;
 
-        if(wRatio>=hRation){ 
-          imgWidth= wWidth-50;
-           }else{
-             imgHeight= wHeight-50; 
-               imgWidth=imgHeight*ratio;
-           }
-      
-        
-        $("#foto-overlay img").css("width", imgWidth +"px");
+        if (wRatio >= hRation) {
+            imgWidth = wWidth - 50;
+        } else {
+            imgHeight = wHeight - 50;
+            imgWidth = imgHeight * ratio;
+        }
+
+
+        $("#foto-overlay img").css("width", imgWidth + "px");
         $("#foto-overlay img").css("max-width", "100%");
     }
 
@@ -605,10 +605,58 @@ $(function () {
     });
 
 
+
+    var headerTl = new TimelineLite();
+    var somos = $("#home .somos");
+    var sforza = $("#home .sforza");
+    var gym = $("#home .gym");
+    var header = $("#home .header");
+    headerTl.fromTo(header, 2, {
+            opacity: 0,
+            y: -500
+        }, {
+            opacity: 1,
+            y: 0
+        })
+        .fromTo(somos, 1.5, {
+            opacity: 0,
+            y: 200,
+            scale: 5
+        }, {
+            opacity: 1,
+            y: 0,
+            scale: 1
+        })
+        .fromTo(gym, 1, {
+            opacity: 0,
+            y: -200
+        }, {
+            opacity: 1,
+            y: 0
+        }, "-=0.5")
+        .fromTo(sforza, 1, {
+            opacity: 0,
+            x: -100
+        }, {
+            opacity: 1,
+            x: 0
+        }, "-=0.5");
+
+
+setInterval(function(){
+    /*var randomX=Math.random()*100;
+    var randomY=Math.random()*100;*/
+    //var po=randomX+"% "+ randomY+"%";
+     
+/*console.log(po);*/
     
-    
+},2000);
    
-   
     
+    
+    TweenMax.to("#home", 1, {
+        backgroundPosition: "10% 0%"
+         
+    });
     
 });
