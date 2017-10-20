@@ -134,7 +134,7 @@ $(function () {
     //----------parallax----------
     $(window).scroll(function () {
         parallax("#home");
-        //parallax("#team");
+      //  parallax("#team");
         parallax("#intro");
         parallax("#tarifa");
         /*console.log("scrolltop: "+$(window).scrollTop());
@@ -185,6 +185,83 @@ $(function () {
 
 
 
+    var toñoTl = new TimelineLite();
+    toñoTl.fromTo(["#man", "#text-tono"], 0.5, {
+            height: "0px",
+            padding: "0px"
+        }, {
+            height: "100%",
+            padding: "20px"
+        })
+        .from("#man img", 0.5, {
+            opacity: 0,
+            rotationY: -180,
+            transformOrigin: "50% top -100"
+        })
+        .from("#text-tono .header", 0.5, {
+            opacity: 0,
+            y: 50
+        })
+        .from("#text-tono p.text", 0.5, {
+            opacity: 0,
+            y: 50
+        });
+
+    var toñoTl2 = new TimelineLite();
+    toñoTl2.fromTo(["#man", "#text-tono"], 0.5, {
+            height: "0px",
+            padding: "0px"
+        }, {
+            height: "100%",
+            padding: "20px"
+        })
+        .from("#man img", 0.5, {
+            opacity: 0,
+            rotationY: -180,
+            transformOrigin: "50% top -100"
+        })
+        .from("#text-tono .header", 0.5, {
+            opacity: 0,
+            y: 50
+        })
+        .from("#text-tono p.text", 0.5, {
+            opacity: 0,
+            y: 50
+        });
+
+
+
+
+
+    var anaTl = new TimelineLite();
+    anaTl.fromTo(["#woman", "#text-ana"], 0.5, {
+            height: "0px",
+            padding: "0px"
+        }, {
+            height: "100%",
+            padding: "20px"
+        })
+        .from("#woman img", 0.5, {
+            opacity: 0,
+            rotationY: -180,
+            transformOrigin: "50% top -100"
+        })
+        .from("#text-ana .header", 0.5, {
+            opacity: 0,
+            y: 50
+        })
+        .from("#text-ana p.text", 0.5, {
+            opacity: 0,
+            y: 50
+        });
+
+
+
+    var teamTl = new TimelineLite();
+    teamTl.from("#team h1", 0.5, {
+        opacity: 0,
+        y: 100
+    });
 
 
 
