@@ -44,7 +44,7 @@ $(function () {
 
 
 
-    //-------------match height---------- 
+    //-------------match height----------
     /*$(".client").matchHeight({
     byRow: false,
     property: 'height',
@@ -134,7 +134,7 @@ $(function () {
     //----------parallax----------
     $(window).scroll(function () {
         parallax("#home");
-        parallax("#team");
+        //parallax("#team");
         parallax("#intro");
         parallax("#tarifa");
         /*console.log("scrolltop: "+$(window).scrollTop());
@@ -185,83 +185,6 @@ $(function () {
 
 
 
-    var toñoTl = new TimelineLite();
-    toñoTl.fromTo(["#man", "#text-tono"], 0.5, {
-            height: "0px",
-            padding: "0px"
-        }, {
-            height: "100%",
-            padding: "20px"
-        })
-        .from("#man img", 0.5, {
-            opacity: 0,
-            rotationY: -180,
-            transformOrigin: "50% top -100"
-        })
-        .from("#text-tono .header", 0.5, {
-            opacity: 0,
-            y: 50
-        })
-        .from("#text-tono p.text", 0.5, {
-            opacity: 0,
-            y: 50
-        });
-
-    var toñoTl2 = new TimelineLite();
-    toñoTl2.fromTo(["#man", "#text-tono"], 0.5, {
-            height: "0px",
-            padding: "0px"
-        }, {
-            height: "100%",
-            padding: "20px"
-        })
-        .from("#man img", 0.5, {
-            opacity: 0,
-            rotationY: -180,
-            transformOrigin: "50% top -100"
-        })
-        .from("#text-tono .header", 0.5, {
-            opacity: 0,
-            y: 50
-        })
-        .from("#text-tono p.text", 0.5, {
-            opacity: 0,
-            y: 50
-        });
-
-
-
-
-
-    var anaTl = new TimelineLite();
-    anaTl.fromTo(["#woman", "#text-ana"], 0.5, {
-            height: "0px",
-            padding: "0px"
-        }, {
-            height: "100%",
-            padding: "20px"
-        })
-        .from("#woman img", 0.5, {
-            opacity: 0,
-            rotationY: -180,
-            transformOrigin: "50% top -100"
-        })
-        .from("#text-ana .header", 0.5, {
-            opacity: 0,
-            y: 50
-        })
-        .from("#text-ana p.text", 0.5, {
-            opacity: 0,
-            y: 50
-        });
-
-
-
-    var teamTl = new TimelineLite();
-    teamTl.from("#team h1", 0.5, {
-        opacity: 0,
-        y: 100
-    });
 
 
 
@@ -471,35 +394,35 @@ $(function () {
              })*/
             .addTo(controller);
 
-        var scene2 = new ScrollMagic.Scene({
-                triggerElement: "#team",
-                triggerHook: 0.4,
-
-            }).setTween(toñoTl)
-            /*.addIndicators({
-                name: "toño"
-            })*/
-            .addTo(controller);
-
-        var scene3 = new ScrollMagic.Scene({
-                triggerElement: "#team",
-                triggerHook: 0.1,
-
-            }).setTween(anaTl)
-            /* .addIndicators({
-             name:"ana"
-             })*/
-            .addTo(controller);
-
-        var scene4 = new ScrollMagic.Scene({
-                triggerElement: "#team",
-                triggerHook: 0.5,
-
-            }).setTween(teamTl)
-            /*.addIndicators({
-            name:"team header"
-            })*/
-            .addTo(controller);
+        // var scene2 = new ScrollMagic.Scene({
+        //         triggerElement: "#team",
+        //         triggerHook: 0.4,
+        //
+        //     }).setTween(toñoTl)
+        //     /*.addIndicators({
+        //         name: "toño"
+        //     })*/
+        //     .addTo(controller);
+        //
+        // var scene3 = new ScrollMagic.Scene({
+        //         triggerElement: "#team",
+        //         triggerHook: 0.1,
+        //
+        //     }).setTween(anaTl)
+        //     /* .addIndicators({
+        //      name:"ana"
+        //      })*/
+        //     .addTo(controller);
+        //
+        // var scene4 = new ScrollMagic.Scene({
+        //         triggerElement: "#team",
+        //         triggerHook: 0.5,
+        //
+        //     }).setTween(teamTl)
+        //     /*.addIndicators({
+        //     name:"team header"
+        //     })*/
+        //     .addTo(controller);
 
 
 
@@ -647,16 +570,16 @@ setInterval(function(){
     /*var randomX=Math.random()*100;
     var randomY=Math.random()*100;*/
     //var po=randomX+"% "+ randomY+"%";
-     
+
 /*console.log(po);*/
-    
+
 },2000);
-   
-    
-    
+
+
+
     TweenMax.to("#home", 1, {
         backgroundPosition: "10% 0%"
-         
+
     });
-    
+
 });

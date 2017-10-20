@@ -76,82 +76,198 @@ a:link {
     color: $red;
 }
 
-@-webkit-keyframes bcg {
-    0% {
-        background-image: url("../images/alvaro_bg.jpg");
-       
-    }
-    20%{
-        background-image: url("../images/alvaro_bg.jpg");
-    }
-    
-    25%{
-        background-image: url("../images/gabri_bg.jpg");
-    }
-    45% {
-        background-image: url("../images/gabri_bg.jpg");
-    }
-   
-    50% {
-        background-image: url("../images/bea_bg.jpg");
-        
-    }
-    70% {
-        background-image: url("../images/bea_bg.jpg");
-    }
-   
-    75% {
-        background-image: url("../images/ivan_bg.jpg");
-        
-    }
-    95% {
-        background-image: url("../images/ivan_bg.jpg");
-        
-    }
-    100% {
-        background-image: url("../images/alvaro_bg.jpg");
-        
-    }
-    
+@include break(1024px){
+  @-webkit-keyframes bcg {
+      0% {
+          background-image: url("../images/alvaro_bg.jpg");
+
+
+      }
+      20%{
+          background-image: url("../images/alvaro_bg.jpg");
+
+      }
+
+      25%{
+          background-image: url("../images/gabri_bg.jpg");
+
+      }
+      45% {
+          background-image: url("../images/gabri_bg.jpg");
+
+      }
+
+      50% {
+          background-image: url("../images/bea_bg.jpg");
+
+
+      }
+      70% {
+          background-image: url("../images/bea_bg.jpg");
+
+      }
+
+      75% {
+          background-image: url("../images/ivan_bg.jpg");
+
+
+      }
+      95% {
+          background-image: url("../images/ivan_bg.jpg");
+
+      }
+      100% {
+          background-image: url("../images/alvaro_bg.jpg");
+
+
+      }
+
+  }
+  @keyframes bcg {
+      0% {
+          background-image: url("../images/alvaro_bg.jpg");
+
+
+      }
+      20%{
+          background-image: url("../images/alvaro_bg.jpg");
+
+      }
+
+      25%{
+          background-image: url("../images/gabri_bg.jpg");
+
+      }
+      45% {
+          background-image: url("../images/gabri_bg.jpg");
+
+      }
+
+      50% {
+          background-image: url("../images/bea_bg.jpg");
+
+      }
+      70% {
+          background-image: url("../images/bea_bg.jpg");
+
+      }
+
+      75% {
+          background-image: url("../images/ivan_bg.jpg");
+
+
+      }
+      95% {
+          background-image: url("../images/ivan_bg.jpg");
+
+
+      }
+      100% {
+          background-image: url("../images/alvaro_bg.jpg");
+
+
+      }
+
+  }
 }
-@keyframes bcg {
-    0% {
-        background-image: url("../images/alvaro_bg.jpg");
-       
-    }
-    20%{
-        background-image: url("../images/alvaro_bg.jpg");
-    }
-    
-    25%{
-        background-image: url("../images/gabri_bg.jpg");
-    }
-    45% {
-        background-image: url("../images/gabri_bg.jpg");
-    }
-   
-    50% {
-        background-image: url("../images/bea_bg.jpg");
-        
-    }
-    70% {
-        background-image: url("../images/bea_bg.jpg");
-    }
-   
-    75% {
-        background-image: url("../images/ivan_bg.jpg");
-        
-    }
-    95% {
-        background-image: url("../images/ivan_bg.jpg");
-        
-    }
-    100% {
-        background-image: url("../images/alvaro_bg.jpg");
-        
-    }
-    
+
+@include break(0px,1023px){
+  @-webkit-keyframes bcg {
+      0% {
+          background-image: url("../images/alvaro_bg.jpg");
+          background-position:  center center;
+
+      }
+      20%{
+          background-image: url("../images/alvaro_bg.jpg");
+          background-position:  center center;
+      }
+
+      25%{
+          background-image: url("../images/gabri_bg.jpg");
+          background-position:  center center;
+      }
+      45% {
+          background-image: url("../images/gabri_bg.jpg");
+          background-position:  center center;
+      }
+
+      50% {
+          background-image: url("../images/bea_bg.jpg");
+          background-position:  center center;
+
+      }
+      70% {
+          background-image: url("../images/bea_bg.jpg");
+          background-position:  center center;
+      }
+
+      75% {
+          background-image: url("../images/ivan_bg.jpg");
+          background-position:  center center;
+
+      }
+      95% {
+          background-image: url("../images/ivan_bg.jpg");
+          background-position:  center center;
+
+      }
+      100% {
+          background-image: url("../images/alvaro_bg.jpg");
+          background-position:  center center;
+
+      }
+
+  }
+  @keyframes bcg {
+      0% {
+          background-image: url("../images/alvaro_bg.jpg");
+          background-position:  center center;
+
+      }
+      20%{
+          background-image: url("../images/alvaro_bg.jpg");
+          background-position:  center center;
+      }
+
+      25%{
+          background-image: url("../images/gabri_bg.jpg");
+          background-position:  center center;
+      }
+      45% {
+          background-image: url("../images/gabri_bg.jpg");
+          background-position:  center center;
+      }
+
+      50% {
+          background-image: url("../images/bea_bg.jpg");
+          background-position:  center center;
+
+      }
+      70% {
+          background-image: url("../images/bea_bg.jpg");
+          background-position:  center center;
+      }
+
+      75% {
+          background-image: url("../images/ivan_bg.jpg");
+          background-position:  center center;
+
+      }
+      95% {
+          background-image: url("../images/ivan_bg.jpg");
+          background-position:  center center;
+
+      }
+      100% {
+          background-image: url("../images/alvaro_bg.jpg");
+          background-position:  center center;
+
+      }
+
+  }
 }
+
 //-------------------------------home page----------------------------
 #home {
     width: 100%;
@@ -160,7 +276,8 @@ a:link {
     background-repeat: no-repeat;
     background-position:  center 0px;
     background-size: cover;
-    -webkit-animation: bcg 30s ease-in infinite;animation: bcg 30s ease-in infinite;
+    -webkit-animation: bcg 30s ease-in infinite;
+    animation: bcg 30s ease-in infinite;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
     @include break(1024px) {
@@ -177,7 +294,7 @@ a:link {
         grid-template-areas: ". ." "header .";
         header {
             grid-area: header;
-            
+
         }
         h1 {
             float: right;

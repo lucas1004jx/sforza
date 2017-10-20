@@ -32,8 +32,8 @@
       type:        'ROADMAP',
       scrollwheel: false,
       marker: {
-        latitude: 41.637188,
-        longitude: -4.739163,
+        latitude: 41.613162,
+        longitude: -4.686522,
         icon:       '',
         title:      '',
         open:       false,

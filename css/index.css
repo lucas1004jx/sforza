@@ -585,44 +585,102 @@ a:link {
   text-decoration: underline !important;
   color: #E34649; }
 
-@-webkit-keyframes bcg {
-  0% {
-    background-image: url("../images/alvaro_bg.jpg"); }
-  20% {
-    background-image: url("../images/alvaro_bg.jpg"); }
-  25% {
-    background-image: url("../images/gabri_bg.jpg"); }
-  45% {
-    background-image: url("../images/gabri_bg.jpg"); }
-  50% {
-    background-image: url("../images/bea_bg.jpg"); }
-  70% {
-    background-image: url("../images/bea_bg.jpg"); }
-  75% {
-    background-image: url("../images/ivan_bg.jpg"); }
-  95% {
-    background-image: url("../images/ivan_bg.jpg"); }
-  100% {
-    background-image: url("../images/alvaro_bg.jpg"); } }
-@keyframes bcg {
-  0% {
-    background-image: url("../images/alvaro_bg.jpg"); }
-  20% {
-    background-image: url("../images/alvaro_bg.jpg"); }
-  25% {
-    background-image: url("../images/gabri_bg.jpg"); }
-  45% {
-    background-image: url("../images/gabri_bg.jpg"); }
-  50% {
-    background-image: url("../images/bea_bg.jpg"); }
-  70% {
-    background-image: url("../images/bea_bg.jpg"); }
-  75% {
-    background-image: url("../images/ivan_bg.jpg"); }
-  95% {
-    background-image: url("../images/ivan_bg.jpg"); }
-  100% {
-    background-image: url("../images/alvaro_bg.jpg"); } }
+@media (min-width: 1024px) {
+  @-webkit-keyframes bcg {
+    0% {
+      background-image: url("../images/alvaro_bg.jpg"); }
+    20% {
+      background-image: url("../images/alvaro_bg.jpg"); }
+    25% {
+      background-image: url("../images/gabri_bg.jpg"); }
+    45% {
+      background-image: url("../images/gabri_bg.jpg"); }
+    50% {
+      background-image: url("../images/bea_bg.jpg"); }
+    70% {
+      background-image: url("../images/bea_bg.jpg"); }
+    75% {
+      background-image: url("../images/ivan_bg.jpg"); }
+    95% {
+      background-image: url("../images/ivan_bg.jpg"); }
+    100% {
+      background-image: url("../images/alvaro_bg.jpg"); } }
+  @keyframes bcg {
+    0% {
+      background-image: url("../images/alvaro_bg.jpg"); }
+    20% {
+      background-image: url("../images/alvaro_bg.jpg"); }
+    25% {
+      background-image: url("../images/gabri_bg.jpg"); }
+    45% {
+      background-image: url("../images/gabri_bg.jpg"); }
+    50% {
+      background-image: url("../images/bea_bg.jpg"); }
+    70% {
+      background-image: url("../images/bea_bg.jpg"); }
+    75% {
+      background-image: url("../images/ivan_bg.jpg"); }
+    95% {
+      background-image: url("../images/ivan_bg.jpg"); }
+    100% {
+      background-image: url("../images/alvaro_bg.jpg"); } } }
+@media (min-width: 0px) and (max-width: 1023px) {
+  @-webkit-keyframes bcg {
+    0% {
+      background-image: url("../images/alvaro_bg.jpg");
+      background-position: center center; }
+    20% {
+      background-image: url("../images/alvaro_bg.jpg");
+      background-position: center center; }
+    25% {
+      background-image: url("../images/gabri_bg.jpg");
+      background-position: center center; }
+    45% {
+      background-image: url("../images/gabri_bg.jpg");
+      background-position: center center; }
+    50% {
+      background-image: url("../images/bea_bg.jpg");
+      background-position: center center; }
+    70% {
+      background-image: url("../images/bea_bg.jpg");
+      background-position: center center; }
+    75% {
+      background-image: url("../images/ivan_bg.jpg");
+      background-position: center center; }
+    95% {
+      background-image: url("../images/ivan_bg.jpg");
+      background-position: center center; }
+    100% {
+      background-image: url("../images/alvaro_bg.jpg");
+      background-position: center center; } }
+  @keyframes bcg {
+    0% {
+      background-image: url("../images/alvaro_bg.jpg");
+      background-position: center center; }
+    20% {
+      background-image: url("../images/alvaro_bg.jpg");
+      background-position: center center; }
+    25% {
+      background-image: url("../images/gabri_bg.jpg");
+      background-position: center center; }
+    45% {
+      background-image: url("../images/gabri_bg.jpg");
+      background-position: center center; }
+    50% {
+      background-image: url("../images/bea_bg.jpg");
+      background-position: center center; }
+    70% {
+      background-image: url("../images/bea_bg.jpg");
+      background-position: center center; }
+    75% {
+      background-image: url("../images/ivan_bg.jpg");
+      background-position: center center; }
+    95% {
+      background-image: url("../images/ivan_bg.jpg");
+      background-position: center center; }
+    100% {
+      background-image: url("../images/alvaro_bg.jpg");
+      background-position: center center; } } }
 #home {
   width: 100%;
   height: 120vh;
