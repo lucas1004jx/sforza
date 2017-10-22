@@ -133,7 +133,7 @@ $(function () {
 
     //----------parallax----------
     $(window).scroll(function () {
-        //parallax("#home");
+        parallax("#home");
       //  parallax("#team");
        parallax("#intro");
         parallax("#tarifa");
