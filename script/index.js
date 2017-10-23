@@ -133,7 +133,9 @@ $(function () {
 
     //----------parallax----------
     $(window).scroll(function () {
-        parallax("#home");
+      var wWidth=$(window).width();
+      wWidth>=1024 ? parallax("#home"):null;
+
       //  parallax("#team");
        parallax("#intro");
         parallax("#tarifa");
@@ -181,23 +183,6 @@ $(function () {
             opacity: 0,
         }, 0.01);
 
-
-
-
-
-
-
-
-
-
-
-
-
-    var teamTl = new TimelineLite();
-    teamTl.from("#team h1", 0.5, {
-        opacity: 0,
-        y: 100
-    });
 
 
 
@@ -263,7 +248,7 @@ $(function () {
 
 
 
-    function scroll1024() {
+    function scrollAnimation() {
         var controller = new ScrollMagic.Controller();
         var scene1 = new ScrollMagic.Scene({
                 triggerElement: "#intro",
@@ -352,102 +337,7 @@ $(function () {
 
     } //------scroll1024
 
-    function scrollMovil() {
-
-
-
-        var controller = new ScrollMagic.Controller();
-        var scene1 = new ScrollMagic.Scene({
-                triggerElement: "#intro",
-                triggerHook: 1
-            }).setTween(introTl)
-            /* .addIndicators({
-                 name: "intro",
-                 colorTrigger: "black",
-                 colorStart: "white",
-                 colorEnd: "#fff"
-             })*/
-            .addTo(controller);
-
-
-
-        var scene6 = new ScrollMagic.Scene({
-                triggerElement: "#tarifa",
-                triggerHook: 0.5
-            })
-            .setTween(tarifaTl)
-            /*.addIndicators()*/
-            .addTo(controller);
-
-        var scene7 = new ScrollMagic.Scene({
-                triggerElement: "#gallery",
-                triggerHook: 1
-            })
-            .setTween(galleryTl)
-            /*.addIndicators()*/
-            .addTo(controller);
-
-        var scene8 = new ScrollMagic.Scene({
-                triggerElement: "#client",
-                triggerHook: 0.5,
-                duration: "50%"
-            })
-            .setTween(TweenMax.from("#client h1", 1, {
-                opacity: 0,
-                y: 100
-            }))
-            /*.addIndicators()*/
-            .addTo(controller);
-
-        $(".client").each(function () {
-            var tl = new TimelineLite();
-
-            tl.from($(this).find("figure"), 1, {
-                    opacity: 0,
-                    scale: 0
-                })
-                .from($(this).find("h4"), 1, {
-                    opacity: 0,
-                    x: 200
-                })
-                .staggerFrom($(this).find("p span"), 1, {
-                    cycle: {
-                        x: function () {
-                            return Math.random() * 600 - 300
-                        },
-                        y: function () {
-                            return Math.random() * 600 - 300
-                        }
-                    },
-                    opacity: 0,
-                }, 0.1);
-
-            var scene8 = new ScrollMagic.Scene({
-                    triggerElement: this,
-                    triggerHook: 0.5,
-                    duration: "20%"
-                }).setTween(tl)
-                /*.addIndicators()*/
-                .addTo(controller);
-        });
-
-
-        var scene9 = new ScrollMagic.Scene({
-                triggerElement: "#contact",
-                triggerHook: 0.5,
-                duration: "50%"
-            })
-            .setTween(contactTl)
-            /*.addIndicators()*/
-            .addTo(controller);
-
-    } //------scrollmovil
-
-    if ($(window).width() >= 1024) {
-        scroll1024();
-    } else {
-        scrollMovil();
-    }
+   scrollAnimation();
 
     var wWidth = $(window).width();
     var screen = "";
@@ -479,12 +369,12 @@ $(function () {
     var sforza = $("#home .sforza");
     var gym = $("#home .gym");
     var header = $("#home .header");
-    headerTl.fromTo(header, 2, {
+    headerTl.fromTo(header, 0.5, {
             opacity: 0,
-            y: -500
+
         }, {
             opacity: 1,
-            y: 0
+
         })
         .fromTo(somos, 1.5, {
             opacity: 0,

@@ -23,6 +23,10 @@ body {
 .page {
     padding: 20px;
     margin: 0 auto;
+    @include break(1024px){
+      min-height: 850px;
+    }
+
 }
 
 .header {
@@ -361,7 +365,7 @@ a:link {
     }
 
     .about {
-        position: static;
+
         @include break(1024px) {
             /* max-width: 1024px;
             background: $red;
@@ -369,7 +373,7 @@ a:link {
             grid-area: about;*/
             position: absolute;
             width: 70% !important;
-            max-width: 1000px;
+            //max-width: 1000px;
             top: 10%;
             left: 0;
             background: $red;
@@ -383,6 +387,7 @@ a:link {
     }
     .text {
         color: #fff;
+
         span {
             display: inline-block;
         }
@@ -391,6 +396,7 @@ a:link {
         background: url("../images/about.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
+        
     }
 }
 

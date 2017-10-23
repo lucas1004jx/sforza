@@ -541,6 +541,9 @@ body {
 .page {
   padding: 20px;
   margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .page {
+      min-height: 850px; } }
 
 .header {
   font-family: Merriweather Sans;
@@ -758,22 +761,19 @@ a:link {
       grid-template-columns: 60% 1fr;
       grid-template-rows: 10% 1fr 10%;
       grid-template-areas: ". ." "about ." ". .";*/ } }
-#intro .about {
-  position: static; }
-  @media (min-width: 1024px) {
-    #intro .about {
-      /* max-width: 1024px;
-      background: $red;
-      padding: 30px;
-      grid-area: about;*/
-      position: absolute;
-      width: 70% !important;
-      max-width: 1000px;
-      top: 10%;
-      left: 0;
-      background: #E34649;
-      padding: 30px;
-      z-index: 5; } }
+@media (min-width: 1024px) {
+  #intro .about {
+    /* max-width: 1024px;
+    background: $red;
+    padding: 30px;
+    grid-area: about;*/
+    position: absolute;
+    width: 70% !important;
+    top: 10%;
+    left: 0;
+    background: #E34649;
+    padding: 30px;
+    z-index: 5; } }
 #intro .header {
   color: #fff;
   text-align: left; }
