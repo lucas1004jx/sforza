@@ -134,7 +134,7 @@ $(function () {
     //----------parallax----------
     $(window).scroll(function () {
       var wWidth=$(window).width();
-      wWidth>=1024 ? parallax("#home"):null;
+       parallax("#home");
 
       //  parallax("#team");
        parallax("#intro");
@@ -159,8 +159,7 @@ $(function () {
 
 
     introTl.from("#intro .about", 0.5, {
-            opacity: 0,
-            width: "0px"
+            opacity: 0
         })
         .from("#intro h1", 0.5, {
             opacity: 0,
@@ -252,7 +251,7 @@ $(function () {
         var controller = new ScrollMagic.Controller();
         var scene1 = new ScrollMagic.Scene({
                 triggerElement: "#intro",
-                triggerHook: 0.5
+                triggerHook: 0.9
             }).setTween(introTl)
             /*.addIndicators({
                 name: "intro",
@@ -347,7 +346,7 @@ $(function () {
         screen = "big";
     }
 
-    $(window).resize(function () {
+  /*  $(window).resize(function () {
         imgResize();
         var currentWidth = $(window).width();
 
@@ -360,7 +359,7 @@ $(function () {
             screen = "big";
             console.log("big");
         }
-    });
+    });*/
 
 
 
@@ -401,20 +400,6 @@ $(function () {
         }, "-=0.5");
 
 
-setInterval(function(){
-    /*var randomX=Math.random()*100;
-    var randomY=Math.random()*100;*/
-    //var po=randomX+"% "+ randomY+"%";
 
-/*console.log(po);*/
-
-},2000);
-
-
-
-    TweenMax.to("#home", 1, {
-        backgroundPosition: "10% 0%"
-
-    });
 
 });
